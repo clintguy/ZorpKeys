@@ -1,2 +1,10 @@
-GEMINI.md
+# Packaging Tools
+.release/
+.pkgmeta
+
+# Build Artifacts
 *.zip
+.build/
+
+# AI
+GEMINI.md
