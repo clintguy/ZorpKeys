@@ -1,0 +1,14 @@
+# ZorpKeys Packaging Metadata
+
+# This tells the packager to move everything into a folder named ZorpKeys
+package-as: ZorpKeys
+
+# Files to exclude from the final user ZIP
+ignore:
+  - .git
+  - .gitignore
+  - .pkgmeta
+  - README.md
+  - LICENSE
+
+# If you ever add external libraries, you would list them under 'externals'
