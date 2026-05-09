@@ -21,11 +21,7 @@ SLASH_ZORPKEYS1 = "/zorpkeys"
 SlashCmdList["ZORPKEYS"] = function()
     local currentTime = GetTime()
     
-    -- Check if we are in a group
-    if not IsInGroup() then
-        print("|cFFFF0000ZorpKeys:|r You must be in a party to use this.")
-        return
-    end
+
 
     -- Check the 60-second internal cooldown
     if (currentTime - lastUsed) < cooldown then
@@ -34,14 +30,15 @@ SlashCmdList["ZORPKEYS"] = function()
         return
     end
 
-    -- Update last used time and broadcast request to other ZorpKeys users
     lastUsed = currentTime
-    C_ChatInfo.SendAddonMessage(prefix, "REQUEST_KEYS", "PARTY")
-    
-    -- Also print your own key immediately
     local myKey = GetKeyString()
     if myKey then
-        SendChatMessage(myKey, "PARTY")
+        if IsInGroup() then
+            C_ChatInfo.SendAddonMessage(prefix, "REQUEST_KEYS", "PARTY")
+            SendChatMessage(myKey, "PARTY")
+        else
+            print(myKey)
+        end
     end
 end
 
