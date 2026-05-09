@@ -6,6 +6,12 @@ local cooldown = 60
 
 -- Function to get and format the current character's key info
 local function GetKeyString()
+    -- Check if C_Keystone API is available
+    if not C_Keystone then
+        print(string.format("|cFFFF0000ZorpKeys:|r Keystone API is nil"))
+        return nil
+    end
+
     local mapID = C_Keystone.GetKeystoneMapID()
     local level = C_Keystone.GetKeystoneLevel()
     
