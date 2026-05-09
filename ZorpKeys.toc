@@ -1,0 +1,7 @@
+## Interface: 120005
+## Title: ZorpKeys
+## Notes: Minimalist M+ Key sharing for the party.
+## Author: Zorp
+## Version: 1.0
+
+ZorpKeys.lua
