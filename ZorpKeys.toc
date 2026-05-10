@@ -2,6 +2,6 @@
 ## Title: ZorpKeys
 ## Notes: Minimalist M+ Key sharing for the party.
 ## Author: Zorp
-## Version: v1.0.2
+## Version: v1.0.3
 
 ZorpKeys.lua
